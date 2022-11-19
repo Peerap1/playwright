@@ -6,9 +6,9 @@ test.skip('Login Demo 1', async ({page}) => {
 });
 
 
-test('Login Demo 2', async ({page}) => {
-    test.fail();
-});
+// test('Login Demo 2', async ({page}) => {
+//     test.fail();
+// });
 
 test.fixme('Login Demo 3', async ({page}) => {
     // test.fail();

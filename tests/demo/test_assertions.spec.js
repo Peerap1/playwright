@@ -3,7 +3,6 @@ import { test, expect } from '@playwright/test'
 
 test('Assertion Demo', async({page}) => {
     await page.goto('https://kitchen.applitools.com/')
-    await page.pause()
     await expect(page.locator('text=The Kitchen')).toHaveCount(1)
     await page.$('text=The Kitchen')
 

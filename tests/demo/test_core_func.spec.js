@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const {hello, ole} = require('./demo/hello')
+const {hello, ole} = require('../js/hello')
 
 console.log (hello());
 console.log (ole());
