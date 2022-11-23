@@ -23,11 +23,20 @@ test('Assertion Demo', async({page}) => {
     await expect.soft(page.locator('text=The Kitchen')).toHaveAttribute('class', /.*heading css-dpmy2a/)
     await expect.soft(page.locator('text=The Kitchen')).toHaveClass(/.*heading css-dpmy2a/)
 
-
     await expect(page).toHaveURL('https://kitchen.applitools.com/')
     await expect(page).toHaveTitle(/Kitchen/)
 
-
-
-
 })
+
+
+test('basic test', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  // await page.pause()
+  const name = await page.innerText('.navbar__title');
+  expect(name).toBe('Playwright');
+});
+
+test('basic test2', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+  expect(await page.innerText('.navbar__title')).toBe('Playwright');
+});
